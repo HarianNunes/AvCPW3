@@ -11,7 +11,8 @@ type UserContextType = {
 const initialValue: UserContextType = {
     lastResult: {
         photos: [],
-        totalPages: 0
+        totalPages: 0,
+        page: 0
     },
     setLastResult: () => {},
     query: '',

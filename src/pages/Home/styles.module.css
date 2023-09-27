@@ -95,14 +95,15 @@
 
 .dropDownMenu {
   position: absolute;
-  width: 110px;
+  font-family: 'regular';
+  width: 130px;
   top: 100%;
   left: 0;
   padding: 10px;
-  background-color: #c5eff7;
+  background-color: #e0eff2;
   list-style: none;
   margin-left: 10px;
-  margin-top: 0;
+  margin-top: 5px;
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -111,10 +112,12 @@
 .dropDownMenu li {
   padding: 5px;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .dropDownMenu li:hover {
   background-color: #59abe3;
+  transition: 400ms;
 }
 
 @media screen and (max-width: 600px) {

@@ -28,11 +28,11 @@ export const searchPhotos = async (
     if (response) {
       const { total_pages, results } = response
       const photos: Photo[] = results.map((r: any) => getPhoto(r))
-      const result: Result = { photos, totalPages: total_pages }
+      const result: Result = { photos, totalPages: total_pages , page}
       return result
     }
   }
 
-  const searchResult: Result = { photos: [], totalPages: 0 }
+  const searchResult: Result = { photos: [], totalPages: 0 , page: 0 }
   return searchResult
 }

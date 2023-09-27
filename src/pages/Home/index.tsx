@@ -6,7 +6,6 @@ import { searchPhotos } from '../../services/PhotoService'
 import { PacmanLoader } from 'react-spinners'
 import ResultCard from '../../components/ResultCard'
 import { useContext } from 'react'
-import { Result } from '../../models/Result'
 import searchIcon from '../../assets/img/search.png'
 import { UserContext } from '../../context/UserContext'
 
@@ -40,13 +39,11 @@ const Home = () => {
     if (query.trim()) {
       console.log('Entrou')
       isLoading(true)
-      setLastResult({
-        photos: [],
-        totalPages: 0,
-      })
       const searchResult = await searchPhotos(query, relevance, page, orientation)
-      console.log(searchResult)
       setLastResult(searchResult)
+      console.log(searchResult);
+      console.log(lastResult  );
+      
       isLoading(false)
     }
   }
